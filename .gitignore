@@ -1,0 +1,6 @@
+# Ignore simlink directory to SDK repository
+__repo__/
+
+# Ignore build output directories
+armgcc/debug/
+armgcc/release/
