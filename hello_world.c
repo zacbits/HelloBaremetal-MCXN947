@@ -8,7 +8,6 @@
 
 #include "fsl_device_registers.h"
 #include "fsl_debug_console.h"
-#include "board.h"
 #include "app.h"
 
 /*******************************************************************************
@@ -36,7 +35,7 @@ int main(void)
     /* Init board hardware. */
     BOARD_InitHardware();
 
-    PRINTF("hello world.\r\n");
+    PRINTF("Hello, world.\r\n");
 
     while (1)
     {

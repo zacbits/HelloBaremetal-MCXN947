@@ -45,12 +45,12 @@ include(${ProjDirPath}/config.cmake)
 
 add_executable(${MCUX_SDK_PROJECT_NAME} 
 "${ProjDirPath}/../hello_world.c"
-"${ProjDirPath}/../board.h"
-"${ProjDirPath}/../board.c"
-"${ProjDirPath}/../clock_config.h"
-"${ProjDirPath}/../clock_config.c"
-"${ProjDirPath}/../pin_mux.c"
-"${ProjDirPath}/../pin_mux.h"
+"${ProjDirPath}/../board/clock_config.h"
+"${ProjDirPath}/../board/clock_config.c"
+"${ProjDirPath}/../board/pin_mux.h"
+"${ProjDirPath}/../board/pin_mux.c"
+"${ProjDirPath}/../board/peripherals.h"
+"${ProjDirPath}/../board/peripherals.c"
 "${ProjDirPath}/../hardware_init.c"
 "${ProjDirPath}/../app.h"
 "${ProjDirPath}/../mcux_config.h"

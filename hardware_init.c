@@ -6,9 +6,9 @@
  */
 
 /*${header:start}*/
-#include "pin_mux.h"
-#include "clock_config.h"
-#include "board.h"
+#include "board/clock_config.h"
+#include "board/pin_mux.h"
+#include "board/peripherals.h"
 #include "fsl_clock.h"
 /*${header:end}*/
 
@@ -18,16 +18,8 @@
 /*${function:start}*/
 void BOARD_InitHardware(void)
 {
-    /* attach FRO 12M to FLEXCOMM4 (debug console) */
-    CLOCK_SetClkDiv(kCLOCK_DivFlexcom4Clk, 1u);
-    CLOCK_AttachClk(BOARD_DEBUG_UART_CLK_ATTACH);
-
-    /* attach TRACECLKDIV to TRACE */
-    CLOCK_SetClkDiv(kCLOCK_DivTraceClk, 2U);
-    CLOCK_AttachClk(kTRACE_DIV_to_TRACE);
-
-    BOARD_InitPins();
+    BOARD_InitBootPins();
     BOARD_InitBootClocks();
-    BOARD_InitDebugConsole();
+    BOARD_InitBootPeripherals();
 }
 /*${function:end}*/
