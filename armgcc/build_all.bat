@@ -3,15 +3,15 @@ if exist Makefile (DEL /s /Q /F Makefile)
 if exist build.ninja (DEL /s /Q /F build.ninja)
 if exist cmake_install.cmake (DEL /s /Q /F cmake_install.cmake)
 if exist CMakeCache.txt (DEL /s /Q /F CMakeCache.txt)
-cmake -DCMAKE_TOOLCHAIN_FILE="../../../../../../tools/cmake_toolchain_files/armgcc.cmake" -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=debug  .
-mingw32-make -j
+cmake --preset debug
+cmake --build --preset debug
 
 if exist CMakeFiles (RD /s /Q CMakeFiles)
 if exist Makefile (DEL /s /Q /F Makefile)
 if exist build.ninja (DEL /s /Q /F build.ninja)
 if exist cmake_install.cmake (DEL /s /Q /F cmake_install.cmake)
 if exist CMakeCache.txt (DEL /s /Q /F CMakeCache.txt)
-cmake -DCMAKE_TOOLCHAIN_FILE="../../../../../../tools/cmake_toolchain_files/armgcc.cmake" -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=release  .
-mingw32-make -j
+cmake --preset release
+cmake --build --preset release
 
 IF "%1" == "" ( pause )
