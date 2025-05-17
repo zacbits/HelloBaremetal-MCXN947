@@ -6,9 +6,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+#include "main.h"
 #include "fsl_device_registers.h"
 #include "fsl_debug_console.h"
-#include "app.h"
 
 /*******************************************************************************
  * Definitions
