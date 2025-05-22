@@ -7,3 +7,5 @@ armgcc/release/
 
 # Ignore locally-generated files
 armgcc/mcux_include.json
+.vscode/launch.json
+.vscode/mcuxpresso-tools.json
