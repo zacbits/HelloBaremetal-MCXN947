@@ -4,3 +4,8 @@ __repo__/
 # Ignore build output directories
 armgcc/debug/
 armgcc/release/
+
+# Ignore locally-generated files
+armgcc/mcux_include.json
+.vscode/launch.json
+.vscode/mcuxpresso-tools.json
